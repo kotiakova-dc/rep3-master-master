@@ -1,0 +1,46 @@
+
+LOGO
+
+
+
+
+
+MARGINS SECTIONS
+add scroll color
+
+заменить stayopen example accord
+
+свернуть везде меню
+проверить отступы в сайдбаре меню
+слишком рано карточки на 100% моб
+padding 25px ?? 90% container main
+z-index иконки главная
+
+
+проверить свг типы продуктов
+
+start title
+заменить h2 на h2 main/paddings
+
+типы блока новостей
+footer
+check news img width
+alt
+
+: 1HhEc6netM
+
+
+
+названия страниц
+
+
+
+
+
+,margin top about_us wrapper 
+
+
+
+ breadcrumbs hover margin
+
+

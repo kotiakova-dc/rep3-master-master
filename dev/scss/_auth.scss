@@ -1,0 +1,402 @@
+/********************************************* CONTACTS  *********************************************/
+.contacts--main {
+  margin-top: 140px;
+}
+.payment-details__wrapper {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.payment-details__title {
+  font-size: 18px;
+  font-family: "StemWebMedium";
+  margin-bottom: 20px;
+}
+.payment-details__txt {
+  padding-bottom: 5px;
+}
+@media only screen and (max-width: 1024px) {
+  .contacts--main {
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .payment-details__wrapper {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}
+.input__wrapper--lg {
+  width: 100%;
+}
+/// auth form modal
+.sign-in__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.sign-in__title {
+  font-family: "StemWebMedium";
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.sign-in__options {
+  display: flex;
+  flex-direction: column;
+}
+a.sign-in__option,
+.forgot-password__option {
+  color: $color-blue;
+  font-family: "StemWebMedium";
+  font-size: 14px;
+  &:first-of-type {
+    margin-bottom: 30px;
+  }
+}
+///
+.modal__input {
+  width: 100%;
+}
+/// registration form modal
+.registration__form,
+.change-user-data__form,
+.change-password__form,
+.forgot-password__form,
+.make-order__form {
+  display: flex;
+  flex-direction: column;
+  .modal__input {
+    margin-bottom: 20px;
+  }
+  .btn--modal {
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+}
+span.input__wrapper {
+  position: relative;
+  &::before {
+    content: "*";
+    display: block;
+    position: absolute;
+    right: 13px;
+    top: 16px;
+  }
+}
+.modal__registration,
+.modal__change-user-data,
+.modal__change-password,
+.modal__forgot-password,
+.modal__make-order {
+  margin: 0 auto;
+  position: relative;
+  width: 640px;
+  background: #faf8f7;
+  box-shadow: 0 8px 22px rgb(29 23 0 / 10%);
+  transition: all 0.3s;
+}
+.modal__registration,
+.modal__change-user-data {
+  padding: 70px 100px 60px 100px;
+}
+.modal__change-password,
+.modal__forgot-password,
+.modal__make-order {
+  height: 640px;
+  padding: 120px 110px 110px 110px;
+}
+.modal {
+  height: 100vh;
+}
+
+.modal__button {
+  display: inline-block;
+
+  color: #fff;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.call-me__modal,
+.sign-in__modal {
+  margin: 0 auto;
+
+  position: relative;
+  background: $color-gray;
+  box-shadow: 0px 8px 22px rgba(29, 23, 0, 0.1);
+  transition: all 0.3s;
+  transform: scale(0.5) translateY(10%);
+}
+.modal__title {
+  font-family: inherit;
+  font-size: 18px;
+  font-family: "StemWebMedium";
+  font-weight: 500;
+  padding-bottom: 30px;
+}
+.modal__subtitle {
+  font-family: inherit;
+  font-size: 14px;
+  font-family: "StemWebMedium";
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.overlay {
+  display: none;
+}
+.overlay--visible {
+  display: block;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.94);
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+.modal__close {
+  display: inline-flex;
+  border-radius: 0.25rem;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+
+  svg {
+    padding: 11px;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+  }
+  &:hover {
+    svg path{
+      fill: $color-blue;
+    }
+  }
+  &:active {
+    svg {
+      background: $color-blue;
+  path{
+      fill: #fff;
+    }
+    }
+    
+    
+  }
+}
+.call-me__modal {
+  padding: 165px 100px;
+  width: 640px;
+}
+.sign-in__modal {
+  padding: 140px 100px 100px 100px;
+  width: 640px;
+}
+.modal__description {
+  margin-bottom: 1.5rem;
+}
+
+.modal__button-width {
+  width: 90%;
+}
+
+.modal__button-link {
+  display: block;
+  margin: 1rem auto 0;
+
+  font-weight: 500;
+}
+
+.show-modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+.show-modal .modal__content {
+  transform: scale(1) translateY(0);
+}
+
+.sign-in__form,
+.call-me__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+
+  .sign-in__checkbox,
+  .call-me__checkbox {
+    grid-column: 2/5;
+    grid-row: 3/4;
+    top: 28px;
+    margin-left: 15px;
+  }
+  .btn--modal {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 145px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .modal__input {
+    grid-column: 1/5;
+    margin-bottom: 26px;
+  }
+}
+
+.btn--modal {
+  background: $color-blue-dark;
+  padding: 16px 44px;
+  color: #fff;
+  border-radius: 27px;
+}
+.promo__form .btn--submit {
+  margin-top: 50px;
+}
+.change-user-data__form {
+  .checkbox__agreement {
+    padding-left: 24px !important;
+    label {
+      .checkmark {
+        left: 1px;
+      }
+    }
+  }
+}
+.checkbox__agreement--registration,
+.make-order__checkbox {
+  padding-left: 24px !important;
+  label {
+    .checkmark {
+      left: 1px;
+    }
+  }
+}
+/// responsive modals
+@media only screen and (max-width: 870px) {
+  .call-me__modal,
+  .sign-in__modal {
+    width: 70vw;
+    padding: 100px 50px;
+    .modal__input {
+      margin-bottom: 5px;
+    }
+    .call-me__checkbox,
+    .sign-in__checkbox {
+      grid-column: 1/4;
+      grid-row: 4/5;
+      margin-left: -14px;
+    }
+  }
+  ///sign in
+  .sign-in__wrapper {
+    margin-top: 20px;
+  }
+  a.sign-in__option:first-of-type {
+    margin-bottom: 10px;
+  }
+
+  .modal__registration {
+    width: 70vw;
+    padding: 100px 50px;
+  }
+
+  .modal__forgot-password,
+  .modal__change-password,
+  .modal__change-user-data {
+    width: 70vw;
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .modal__make-order {
+    width: 70vw;
+    padding: 70px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .modal__title {
+    font-size: 16px;
+    padding-bottom: 15px;
+  }
+  .call-me__modal,
+  .sign-in__modal,
+  .make-order__modal {
+    width: 80vw;
+    padding: 50px 30px;
+    .btn--modal {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  .modal__registration,
+  .modal__change-user-data,
+  .modal__change-password,
+  .modal__forgot-password,
+  .modal__make-order {
+    width: 80vw;
+    padding: 50px 30px;
+    height: auto;
+  }
+  .modal__registration,
+  .modal__forgot-password,
+  .modal__change-password,
+  .modal__change-user-data,
+  .modal__make-order {
+    height: auto;
+    .btn--lg {
+      width: 165px;
+    }
+  }
+  .btn--modal {
+    padding: 16px 20px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .call-me__modal,
+  .sign-in__modal,
+  .make-order__modal {
+    padding: 60px 30px;
+  }
+  .modal__registration,
+  .modal__change-user-data,
+  .modal__change-password,
+  .modal__forgot-password,
+  .modal__make-order {
+    padding: 60px 30px;
+  }
+}
+.go-back-btn {
+  color: #0278e5;
+  font-family: "StemWebMedium";
+  font-size: 14px;
+}

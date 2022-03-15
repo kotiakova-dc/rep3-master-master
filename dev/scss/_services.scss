@@ -1,0 +1,494 @@
+/// margins
+.installation__wrapper,
+.ventilation-installation__wrapper,
+.make-order,
+.installation-details__wrapper,
+.popular-product__wrapper,
+.services__qa,
+.all-services__wrapper {
+  margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .installation__wrapper,
+  .ventilation-installation__wrapper,
+  .make-order,
+  .installation-details__wrapper,
+  .popular-product__wrapper,
+  .services__qa,
+  .all-services__wrapper {
+    margin-bottom: 70px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .installation__wrapper,
+  .ventilation-installation__wrapper,
+  .make-order,
+  .installation-details__wrapper,
+  .popular-product__wrapper,
+  .services__qa,
+  .all-services__wrapper {
+    margin-bottom: 50px;
+  }
+}
+
+/********************************************* SERVICES CARDS *********************************************/
+.services__wrapper {
+  margin-bottom: 44px;
+  margin-top: 140px;
+}
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 44px;
+}
+.services__card {
+  width: 100%;
+  background: #faf8f7;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 70px;
+  svg {
+    width: 140px;
+    max-height: 140px;
+    margin-right: 50px;
+  }
+  h3 {
+    text-align: center;
+    color: $color-black;
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 60%;
+  }
+  &:hover {
+    background: $color-blue;
+    h3 {
+      color: #fff;
+    }
+
+    svg {
+      mask {
+        ellipse {
+          fill: #fff;
+          stroke: #fff;
+        }
+      }
+      rect,
+      ellipse {
+        stroke: #fff;
+      }
+    }
+    .fill-path {
+      path {
+        fill: #fff;
+      }
+    }
+    .fill-line {
+      line {
+        fill: #fff;
+      }
+    }
+    .stroke-path {
+      path {
+        stroke: #fff;
+      }
+    }
+    .stroke-line {
+      line {
+        stroke: #fff;
+      }
+    }
+    .hover-fill {
+      fill: #fff !important;
+      stroke: none !important;
+    }
+    .hover-stroke {
+      stroke: #fff;
+      fill: none !important;
+    }
+  }
+}
+/********************************************* MEDIA *********************************************/
+@media only screen and (max-width: 1600px) {
+  .services__card {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    svg {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .services {
+    grid-gap: 20px;
+  }
+  .services__card {
+    h3 {
+      font-size: 16px;
+    }
+    svg {
+      max-height: 100px;
+      width: 100px;
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .services__wrapper {
+    margin-bottom: 44px;
+  }
+  .services {
+    grid-gap: 20px;
+  }
+  .services__card {
+    padding-left: 30px;
+    padding-right: 20px;
+    svg {
+      max-height: 100px;
+      width: 100px;
+      margin-right: 10px;
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .services__wrapper {
+    margin-top: 50px;
+  }
+  .services__card {
+    padding-left: 15px;
+    h3 {
+      width: 80%;
+      font-size: 13px;
+    }
+    svg {
+      max-height: 80px;
+      width: 80px;
+      margin-right: 10px;
+    }
+  }
+}
+@media only screen and (max-width: 640px) {
+  .services {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .services__card {
+    justify-content: center;
+    h3 {
+      width: 50%;
+    }
+  }
+}
+@media only screen and (max-width: 375px) {
+  .services__card {
+    padding-left: 10px;
+    padding-right: 10px;
+    h3 {
+      width: 50%;
+    }
+  }
+}
+/********************************************* SERVICE PAGE *********************************************/
+
+.installation__info {
+  display: flex;
+  justify-content: space-between;
+}
+.installation__img {
+  margin-bottom: 40px;
+  width: 100%;
+}
+.installation__col {
+  width: 47%;
+}
+.installation__txt {
+  padding-bottom: 20px;
+}
+@media only screen and (max-width: 1366px) {
+  .installation__col {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .installation__info {
+    flex-direction: column;
+  }
+  .installation__col {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .installation {
+    margin-bottom: 50px;
+  }
+  .installation__txt {
+    font-size: 13px;
+  }
+  .installation__info {
+    flex-direction: column;
+  }
+  .installation__col {
+    width: 100%;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .ventilation-installation__wrapper {
+    margin-bottom: 50px;
+  }
+  .make-order {
+    margin-bottom: 50px;
+  }
+}
+// conditioner installation
+.features--show {
+  display: grid !important;
+}
+.conditioner-installation__info {
+  display: flex;
+  justify-content: space-between;
+}
+.conditioner-installation__col--1 {
+  width: 67%;
+}
+.conditioner-installation__col--2 {
+  width: 30%;
+}
+.features__title,
+.conditioner-installation__title {
+  font-family: "StemWebMedium" !important;
+  background: #fff !important;
+  padding: 22px !important;
+}
+@media only screen and (max-width: 1366px) {
+  .conditioner-installation__col--1 {
+    width: 60%;
+  }
+  .conditioner-installation__col--2 {
+    width: 38%;
+  }
+}
+@media only screen and (max-width: 870px) {
+  .conditioner-installation__info {
+    flex-direction: column;
+  }
+  .conditioner-installation__col--1 {
+    width: 100%;
+  }
+  .conditioner-installation__col--2 {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+/// make order
+.make-order {
+  display: flex;
+  justify-content: space-between;
+}
+.make-order__col {
+  width: 47%;
+}
+.make-order__col--1 {
+  display: flex;
+  align-items: center;
+  svg {
+    width: 140px;
+    max-height: 140px;
+    margin-right: 20px;
+  }
+}
+.make-order__col--2 {
+  display: flex;
+  justify-content: center;
+  background: #faf8f7;
+  align-items: center;
+  padding: 50px 20px;
+}
+.make-order__title {
+  font-size: 28px;
+  font-family: "StemWebMedium";
+  text-transform: uppercase;
+}
+.make-order__btn {
+  width: 60%;
+  border-radius: 27px;
+}
+//// installation details
+
+.installation-details {
+  display: flex;
+}
+.installation-details__info {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 40px;
+}
+.installation-details__col {
+  width: 47%;
+}
+.advantages__title {
+  font-family: "StemWebMedium";
+  margin-bottom: 22px;
+}
+.all-services {
+  .swiper-slide-next {
+    opacity: 1 !important;
+  }
+}
+.all-services__slide {
+  height: 210px;
+  width: 90% !important;
+}
+.all-services__navigation {
+  position: relative;
+  top: -125px;
+}
+// qa
+
+@media only screen and (max-width: 1600px) {
+  /// make order
+  .make-order__col {
+    width: 49%;
+  }
+  .installation-details__info {
+    flex-direction: column;
+  }
+  .installation-details__col {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .make-order__col--2 {
+    svg {
+      max-height: 100px;
+      width: 100px;
+    }
+  }
+
+  /// make order
+  .make-order__title {
+    font-size: 24px;
+  }
+  .installation-details__info {
+    flex-direction: column;
+  }
+  .installation-details__col {
+    width: 100%;
+  }
+
+  /// slider
+  .all-services__slide {
+    height: 100px;
+  }
+  .all-services__navigation {
+    top: -75px;
+  }
+}
+@media only screen and (max-width: 870px) {
+  /// titles
+  .conditioner-installation__title,
+  .advantages__title {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 0 !important;
+    padding-left: 43px !important;
+    padding-bottom: 30px !important;
+    text-transform: uppercase;
+    &::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      background: #0278e5;
+      height: 2px;
+      width: 30px;
+      left: 0;
+      top: 15px;
+    }
+  }
+  .make-order {
+    flex-direction: column;
+  }
+  .make-order__title {
+    font-size: 20px;
+    text-align: center;
+  }
+  .make-order__col--1 {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 60%;
+  }
+  .make-order__btn {
+    width: 40%;
+    margin-left: 30px;
+  }
+
+  .make-order__col--2 {
+    width: 100%;
+  }
+  /// install details
+
+  .installation-details {
+    flex-direction: column;
+  }
+  .installation-details__info {
+    margin-bottom: 50px;
+  }
+  .installation-details__info {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .make-order__col--2 svg {
+    max-height: 80px;
+    width: 80px;
+  }
+  .make-order__btn {
+    width: 60%;
+    margin-left: 20px;
+  }
+  /// slider
+  .all-services__slide {
+    width: 100% !important;
+  }
+  .installation-details__info {
+    max-width: 95%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .make-order__col--1 {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .conditioner-installation__title,
+  .advantages__title {
+    &::before {
+      top: 12px;
+    }
+  }
+}
+@media only screen and (max-width: 375px) {
+  .make-order__col--2 {
+    padding: 40px 10px;
+  }
+  .make-order__btn {
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .swiper-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}

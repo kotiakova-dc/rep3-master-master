@@ -1,0 +1,436 @@
+/********************************************* SIDEBAR FILTER *********************************************/
+
+.btn--close-filter {
+  background: #fff;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  filter: drop-shadow(0px 3px 6px rgba(29, 23, 0, 0.1));
+  float: right;
+  bottom: 45px;
+  position: relative;
+  display: none;
+}
+
+.btn--do-filter {
+  display: block;
+  background: $color-blue;
+  border-radius: 27px;
+  width: 124px;
+  height: 36px;
+  color: #fff;
+  margin: 0 auto;
+  font-size: 14px;
+  display: none;
+  &:active,
+  &:focus {
+    background: $color-blue-dark;
+    color: #fff;
+  }
+}
+.filter--open {
+  transform: translateX(0) !important;
+}
+// .filter--open-mob {
+//   transform: translateX(-20%) !important;
+// }
+@media only screen and (max-width: 1024px) {
+  /// FILTER
+  .sidebar__filter {
+    background: #faf8f7;
+    display: block;
+    transform: translateX(-100%);
+    transition: 0.5s ease-in-out;
+    z-index: 1000;
+    top: 0;
+    padding-top: 80px;
+  }
+
+  .btn--do-filter {
+    display: block;
+  }
+  .btn--close-filter {
+    display: block;
+  }
+  .irs--round .irs-line {
+    background-color: #d7d5d5;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.sidebar__filter {
+  height: 1400px;
+  padding-top: 20px;
+  padding-right: 80px;
+}
+.filter__title {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "StemWebMedium";
+  margin-bottom: 20px;
+  &:first-of-type {
+    margin-bottom: 10px;
+  }
+}
+
+.hr-line {
+  width: 100%;
+  height: 2px;
+  margin-bottom: 28px;
+  background: #d7d5d5;
+  border-radius: 2px;
+  display: block;
+}
+
+.slider-track {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background: #0278e5;
+}
+
+.range-slider-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  top: -20px;
+}
+
+.range-slider-input {
+  width: 168px;
+  height: 40px;
+  border: 1px solid #1d1700;
+  border-radius: 0;
+  text-align: center;
+  padding-top: 2px;
+  position: relative;
+  font-size: 18px;
+}
+.range-slider-input::placeholder {
+  color: $color-black;
+}
+.irs--round .irs-line {
+  height: 2px;
+  background-color: #faf8f7;
+}
+
+span.rub {
+  position: absolute;
+}
+.range-slider-input--2,
+.range-slider-input--1 {
+  position: relative;
+}
+.range-slider-input--2 i,
+.range-slider-input--1 i {
+  position: absolute;
+  top: 6px;
+  right: 17px;
+  font-size: 18px;
+  font-weight: 100;
+  font-style: normal;
+}
+.irs--round {
+  width: 100%;
+  margin-bottom: 0px;
+  top: -28px;
+}
+
+.irs--round .irs-handle {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  top: 27px;
+  height: 18px;
+  width: 18px;
+  background: #0278e5;
+  cursor: pointer;
+}
+
+.irs--round .irs-bar {
+  height: 1px !important;
+}
+
+/* search */
+// .search-container {
+//   width: 490px;
+//   display: block;
+//   margin: 0 auto;
+// }
+
+input.search--filter {
+  margin: 0 auto;
+  width: 100%;
+  height: 40px;
+  padding-left: 12px;
+  border: 1px solid #1d1700;
+  outline: none;
+
+  font-size: 18px;
+}
+// input.search--filter:focus {
+//   border: 1px solid #008abf;
+//   -webkit-transition: 0.35s ease;
+//   -o-transition: 0.35s ease;
+//   transition: 0.35s ease;
+//   color: #008abf;
+// }
+input.search--filter:focus::-webkit-input-placeholder {
+  -webkit-transition: opacity 0.45s ease;
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input.search--filter:focus::-moz-placeholder {
+  -moz-transition: opacity 0.45s ease;
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input.search--filter:focus:-ms-placeholder {
+  -ms-transition: opacity 0.45s ease;
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+.irs--round .irs-handle.state_hover, .irs--round .irs-handle:hover {
+  background: $color-blue;
+}
+.radio__search {
+  position: relative;
+}
+
+.radio__search a img {
+  position: absolute;
+  right: 12px;
+  top: 13px;
+}
+
+.radio__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 290px;
+  overflow-y: scroll;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.radio__options--no-scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  overflow-y: scroll;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.radio__container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: inherit;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.radio__container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark--lg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+
+  border: 1px solid #1d1700;
+}
+
+.radio__container:hover input ~ .checkmark--lg {
+  background-color: $color-gray;
+}
+
+.radio__container input:checked ~ .checkmark--lg {
+  background-color: #fff;
+}
+
+.checkmark--lg:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio__container input:checked ~ .checkmark--lg:after {
+  display: block;
+}
+
+.radio__container .checkmark--lg:after {
+  left: 7px;
+  top: 1px;
+  width: 7px;
+  height: 15px;
+  border: solid #1d1700;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.hr-divider--sm {
+  display: inline;
+  position: relative;
+  background: $color-black;
+  height: 1px;
+  width: 27px;
+  top: 20px;
+}
+/// switch
+input[type="checkbox"].switch {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  display: none;
+}
+.switch__label--filter {
+  margin-bottom: 23px !important;
+}
+label.switch__label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 34px;
+  height: 8px;
+  background: #d7d5d5;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label.switch__label:after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  width: 18px;
+  height: 18px;
+  background: #e3e4e6;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input.switch:checked + label.switch__label {
+  background: #e3e4e6;
+}
+
+input.switch:checked + label.switch__label:after {
+  left: calc(100%);
+  transform: translateX(-100%);
+  background: $color-blue;
+}
+/// MEDIA QUERIES
+@media only screen and (max-width: 1800px) {
+  .range-slider-input {
+    width: 150px;
+  }
+  .hr-divider--sm {
+    width: 18px;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .range-slider-input {
+    width: 130px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .sidebar__filter {
+    height: 1300px;
+  }
+  .filter__title {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .range-slider-input {
+    font-size: 14px;
+    height: 30px;
+    width: 105px;
+  }
+  .radio__search a img {
+    top: 7px;
+  }
+  .hr-divider--sm {
+    top: 15px;
+  }
+  .radio__container {
+    font-size: 14px;
+  }
+  .radio__options {
+    height: 270px;
+  }
+  .range-slider-input--1 i,
+  .range-slider-input--2 i {
+    top: 4px;
+    right: 17px;
+    font-size: 14px;
+  }
+  input.search--filter {
+    height: 30px;
+  }
+
+  .checkmark--lg {
+    height: 17px;
+    width: 17px;
+    top: 4px;
+  }
+
+  .radio__container .checkmark--lg::after {
+    left: 6px;
+    top: 0px;
+    width: 6px;
+    height: 13px;
+    border: solid #1d1700;
+    border-top-width: medium;
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+}
